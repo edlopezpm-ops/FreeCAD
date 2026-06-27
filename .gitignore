@@ -1,0 +1,11 @@
+﻿__pycache__/
+*.py[cod]
+*$py.class
+
+# Private Codex working instructions. Keep these local.
+CODEX.MD
+**/CODEX.MD
+
+# FreeCAD generated backups / local exports
+*.FCStd1
+*.bak
