@@ -7,45 +7,34 @@ import Part
 doc = App.newDocument("Draft_Catamaran_Hull_Lines")
 
 
-# =========================
-# BASIC CATAMARAN PARAMETERS
-# Units: millimeters
-# =========================
+# Define las medidas base en milimetros.
 
 L = 12000
-# Largo total del catamarán: 12 metros.
+# Usa 12 metros de largo total.
 
 hull_beam = 1200
-# Manga de CADA casco individual.
-# No es la manga total del catamarán.
+# Ajusta la manga de cada casco.
 
 overall_beam = 6000
-# Manga total aproximada del catamarán.
-# Distancia total de lado exterior a lado exterior.
+# Ajusta la manga total aproximada.
 
 D = 1200
-# Profundidad de cada casco.
+# Ajusta la profundidad de cada casco.
 
 stations = 15
-# Cantidad de secciones transversales por casco.
+# Cambia la cantidad de secciones.
 
 hull_spacing = overall_beam - hull_beam
-# Distancia entre centros de los dos cascos.
-# Si overall_beam = 6000 y hull_beam = 1200,
-# entonces los centros quedan separados por 4800 mm.
+# Calcula la separacion entre centros.
 
 port_hull_y = -hull_spacing / 2
-# Centro del casco de babor.
-# Y negativo = lado izquierdo.
+# Ubica el casco de babor.
 
 starboard_hull_y = hull_spacing / 2
-# Centro del casco de estribor.
-# Y positivo = lado derecho.
+# Ubica el casco de estribor.
 
 
-# =========================
-# VISUAL STYLE FUNCTION
-# =========================
+# Aplica color y grosor a cada curva.
 
 def style(obj, color=(0.2, 0.45, 0.9), width=2):
     obj.ViewObject.LineColor = color
@@ -53,47 +42,30 @@ def style(obj, color=(0.2, 0.45, 0.9), width=2):
     return obj
 
 
-# =========================
-# HULL SHAPE FUNCTIONS
-# =========================
+# Calcula la forma del casco.
 
 def beam_at(x):
-    """
-    Manga local de cada casco individual.
-    Más delgado en proa/popa, más ancho al centro.
-    """
+    """Haz el casco mas ancho al centro."""
     t = x / L
     return hull_beam * (0.10 + 0.90 * (1 - (2*t - 1)**2))
 
 
 def depth_at(x):
-    """
-    Profundidad local de cada casco.
-    Menos profundo en extremos, más profundo al centro.
-    """
+    """Haz el casco mas profundo al centro."""
     t = x / L
     return D * (0.40 + 0.60 * (1 - (2*t - 1)**2))
 
 
 def z_keel(x):
-    """
-    Línea de quilla / rocker de cada casco.
-    Z negativo significa hacia abajo.
-    """
+    """Traza la quilla por debajo de la linea base."""
     t = x / L
     return -depth_at(x) * (0.70 + 0.30 * (1 - abs(2*t - 1)))
 
 
-# =========================
-# FUNCTION TO CREATE ONE HULL
-# =========================
+# Crea las curvas de un casco.
 
 def create_single_hull(center_y, name_prefix):
-    """
-    Crea las líneas de UN casco.
-    Luego llamamos esta función dos veces:
-    una para babor y otra para estribor.
-    """
+    """Dibuja un casco y sus guias."""
 
     station_curves = []
 
@@ -110,12 +82,7 @@ def create_single_hull(center_y, name_prefix):
         depth = depth_at(x)
         keel_z = z_keel(x)
 
-        # =========================
-        # CROSS SECTION POINTS
-        # =========================
-        # Esta sección crea una costilla transversal del casco.
-        # La diferencia con el monohull es que todo está desplazado
-        # alrededor de center_y.
+        # Dibuja una seccion transversal.
 
         pts = [
             App.Vector(x, center_y - half_beam, 0),
@@ -132,9 +99,7 @@ def create_single_hull(center_y, name_prefix):
         style(curve, (0.1, 0.4, 1.0), 2)
         station_curves.append(curve)
 
-        # =========================
-        # LONGITUDINAL GUIDE POINTS
-        # =========================
+        # Guarda puntos para las guias largas.
 
         keel_pts.append(App.Vector(x, center_y, keel_z))
 
@@ -146,9 +111,7 @@ def create_single_hull(center_y, name_prefix):
 
         starboard_chine_pts.append(App.Vector(x, center_y + half_beam * 0.50, -depth * 0.65))
 
-    # =========================
-    # CREATE LONGITUDINAL CURVES
-    # =========================
+    # Dibuja las guias longitudinales.
 
     keel = Draft.make_bspline(keel_pts, closed=False, face=False)
     keel.Label = "%s_Keel_Line" % name_prefix
@@ -173,25 +136,20 @@ def create_single_hull(center_y, name_prefix):
     return station_curves
 
 
-# =========================
-# CREATE BOTH CATAMARAN HULLS
-# =========================
+# Dibuja los dos cascos.
 
 port_hull = create_single_hull(port_hull_y, "Port_Hull")
 
 starboard_hull = create_single_hull(starboard_hull_y, "Starboard_Hull")
 
 
-# =========================
-# OPTIONAL DECK / BRIDGE GUIDE LINES
-# These are only visual reference lines
-# =========================
+# Agrega guias visuales para la cubierta.
 
 deck_z = 500
-# Altura visual del puente/cubierta sobre los cascos.
+# Ajusta la altura de la cubierta.
 
 bridge_station_indexes = [3, 7, 11]
-# Estaciones donde dibujaremos líneas transversales entre ambos cascos.
+# Elige donde van las lineas del puente.
 
 for idx in bridge_station_indexes:
     x = L * idx / (stations - 1)
@@ -206,9 +164,7 @@ for idx in bridge_station_indexes:
     style(bridge_line, (0.8, 0.2, 0.8), 2)
 
 
-# =========================
-# CENTERLINE REFERENCE
-# =========================
+# Agrega la linea central.
 
 centerline_pts = [
     App.Vector(0, 0, deck_z),
@@ -220,9 +176,7 @@ centerline.Label = "Catamaran_Centerline_Reference"
 style(centerline, (0.5, 0.5, 0.5), 1)
 
 
-# =========================
-# UPDATE DOCUMENT AND VIEW
-# =========================
+# Actualiza el modelo y centra la vista.
 
 doc.recompute()
 

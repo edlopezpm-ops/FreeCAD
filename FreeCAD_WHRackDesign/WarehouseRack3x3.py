@@ -7,22 +7,13 @@ except Exception:
     Gui = None
 
 
-# ============================================================
-# WAREHOUSE RACK DESIGN - FREECAD PYTHON CONSOLE SCRIPT
-# Units: millimeters
-#
-# Paste this entire file into the FreeCAD Python console.
-# It creates three warehouse pallet racks, each with three storage
-# levels. The model is intentionally structural/visual only.
-# ============================================================
+# Pega este script en FreeCAD para crear tres racks de almacen.
 
 
 DOC_NAME = "FreeCAD_WHRackDesing_3_Racks_3_Levels"
 
 
-# -----------------------------
-# Rack dimensions
-# -----------------------------
+# Ajusta las medidas del rack en milimetros.
 
 RACK_COUNT = 3
 LEVEL_COUNT = 3
@@ -44,9 +35,7 @@ BASE_PLATE_SIZE = 220.0
 BASE_PLATE_THICKNESS = 18.0
 
 
-# -----------------------------
-# Colors
-# -----------------------------
+# Cambia estos colores si quieres otro acabado.
 
 UPRIGHT_COLOR = (0.05, 0.22, 0.65)
 BEAM_COLOR = (0.95, 0.52, 0.08)
