@@ -9,19 +9,10 @@ except Exception:
     Gui = None
 
 
-# ============================================================
-# CATAMARAN HULL ONLY - FREECAD PYTHON CONSOLE SCRIPT
-# Units: millimeters
-#
-# Paste this entire file into the FreeCAD Python console.
-# It creates two closed lofted hulls, no bridge deck, no rigging,
-# no cabin, no furniture, no non-hull structure.
-# ============================================================
+# Pega este script en FreeCAD para crear dos cascos cerrados.
 
 
-# -----------------------------
-# Main dimensions
-# -----------------------------
+# Ajusta las medidas principales en milimetros.
 
 DOC_NAME = "Catamaran_Hull_Only"
 
@@ -39,9 +30,7 @@ PORT_CENTER_Y = -HULL_CENTER_SPACING / 2.0
 STARBOARD_CENTER_Y = HULL_CENTER_SPACING / 2.0
 
 
-# -----------------------------
-# Utility functions
-# -----------------------------
+# Usa estas ayudas para construir la geometria.
 
 def clamp(value, low, high):
     return max(low, min(high, value))
@@ -52,10 +41,7 @@ def station_t(index):
 
 
 def longitudinal_fullness(t):
-    """
-    Smooth fullness curve: narrow at bow/stern and fuller near midship.
-    The minimum prevents the loft from collapsing into a numerical point.
-    """
+    """Mantiene los extremos estrechos y el centro lleno."""
     wave = math.sin(math.pi * clamp(t, 0.0, 1.0))
     return 0.10 + 0.90 * (wave ** 0.72)
 
@@ -70,18 +56,12 @@ def draft_at(t):
 
 
 def keel_z_at(t):
-    """
-    Rockered keel: shallow at bow/stern, deepest around midship.
-    Z is negative below the waterline/sheer reference plane.
-    """
+    """Coloca la quilla mas baja al centro."""
     return -draft_at(t)
 
 
 def sheer_z_at(t):
-    """
-    Slight sheer rise toward the ends.
-    Keeps the top edge from looking mechanically flat.
-    """
+    """Levanta un poco los extremos del borde superior."""
     end_lift = abs(2.0 * t - 1.0)
     return 70.0 * (end_lift ** 1.6)
 
@@ -121,18 +101,10 @@ def add_shape(doc, name, shape, color, transparency=0, line_width=2):
     return obj
 
 
-# -----------------------------
-# Hull geometry
-# -----------------------------
+# Construye la geometria del casco.
 
 def station_profile_points(center_y, t):
-    """
-    Returns one closed transverse section in the Y/Z plane at a station.
-
-    The points run port-side sheer -> keel -> starboard-side sheer -> top
-    closure. The top closure exists only to make the hull a valid closed
-    lofted solid.
-    """
+    """Devuelve una seccion cerrada del casco."""
     x = x_at(t)
     half_beam = beam_at(t) / 2.0
     draft = draft_at(t)
