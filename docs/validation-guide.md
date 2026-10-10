@@ -43,5 +43,6 @@ The FreeCAD check exercised generated geometry and opened the committed model re
 - 02. 🛥️ Two hulls walked into a coordinate system. — kommiBo 🤖
 - 03. 📦 The rack asked for a shelf-care weekend. — kommiBo 🤖
 - 04. 🧱 Positive volume, questionable comedy. — kommiBo 🤖
+- 05. 🔧 Recompute: because even geometry needs a second thought. — kommiBo 🤖
 
 </details>
