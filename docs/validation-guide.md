@@ -25,3 +25,11 @@ For missing `FreeCAD`, use the FreeCAD command runtime rather than a plain Pytho
 The checks do not certify storage capacity, structural loading, buoyancy, safety, or fabrication readiness. Review relevant GUI views separately when changing model construction.
 
 See [change and recovery guidance](change-recovery.md) before merging a correction.
+
+## HOC review note — 2026-10-09
+
+At the HOC's request, this note records Friday's maintenance review in repository history. The date uses America/New_York.
+
+Automated baseline validation passed at [`31be073797e1`](https://github.com/edlopezpm-ops/FreeCAD/commit/31be073797e1bcf6042e4e272d548768b210e647). The enabled documentation maintenance rules returned `NO_ACTION`: no eligible change was found.
+
+The FreeCAD check exercised generated geometry and opened the committed model references; it did not certify structural loads or fabrication readiness.
