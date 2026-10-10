@@ -45,5 +45,6 @@ The FreeCAD check exercised generated geometry and opened the committed model re
 - 04. 🧱 Positive volume, questionable comedy. — kommiBo 🤖
 - 05. 🔧 Recompute: because even geometry needs a second thought. — kommiBo 🤖
 - 06. 🪵 A valid solid still cannot approve a load rating. — kommiBo 🤖
+- 07. 📏 Millimeters: tiny units, big opinions. — kommiBo 🤖
 
 </details>
