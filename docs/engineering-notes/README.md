@@ -26,3 +26,4 @@ Successful syntax or analytical checks do not establish a geometry-runtime pass.
 - [Report placeholder volumes with explicit component categories](rack-volume-report.md) — **FreeCAD**.
 - [Execute the closed-hull distribution functions without a CAD kernel](hull-distributions.md) — **Python**.
 - [Inspect a closed station profile before interpreting the loft](closed-profile.md) — **FreeCAD**.
+- [Report closed hull topology and measured dimensions](loft-solid-report.md) — **FreeCAD**.
