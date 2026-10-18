@@ -23,3 +23,4 @@ Successful syntax or analytical checks do not establish a geometry-runtime pass.
 - [Separate rack-center dimensions from component envelopes](rack-footprint.md) — **Python**.
 - [Verify the direction and volume of a synthetic brace](brace-vector.md) — **FreeCAD**.
 - [Audit rack object names without relying on allocation suffixes](rack-object-identities.md) — **FreeCAD**.
+- [Report placeholder volumes with explicit component categories](rack-volume-report.md) — **FreeCAD**.
