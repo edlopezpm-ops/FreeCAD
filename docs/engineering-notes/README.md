@@ -29,3 +29,4 @@ Successful syntax or analytical checks do not establish a geometry-runtime pass.
 - [Report closed hull topology and measured dimensions](loft-solid-report.md) — **FreeCAD**.
 - [Check guide visibility options against the construction inventory](display-option-counts.md) — **FreeCAD**.
 - [Compare the sample guide model with the closed hull model](guide-versus-solid.md) — **FreeCAD**.
+- [Open committed reference models without overwriting them](committed-model-readback.md) — **FreeCAD**.
