@@ -33,3 +33,4 @@ Successful syntax or analytical checks do not establish a geometry-runtime pass.
 - [Export only the two hull solids to temporary BREP custody](hull-brep-roundtrip.md) — **FreeCAD**.
 - [Demonstrate a document-property edit with restoration](rack-property-recompute.md) — **FreeCAD**.
 - [Translate a copied hull without editing the source object](hull-placement-copy.md) — **FreeCAD**.
+- [Fingerprint source and inspect reference archives without opening CAD](reference-archive-manifest.md) — **Python**.
