@@ -19,3 +19,4 @@ Successful syntax or analytical checks do not establish a geometry-runtime pass.
 
 - [Read the rack inputs and their actual construction dependencies](rack-input-contract.md) — **Python**.
 - [Reconcile rack members with the 94-object baseline](rack-parts-inventory.md) — **Python**.
+- [Calculate deck elevations and nominal vertical gaps](rack-clearance-schedule.md) — **Python**.
