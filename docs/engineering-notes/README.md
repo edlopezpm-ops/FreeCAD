@@ -28,3 +28,4 @@ Successful syntax or analytical checks do not establish a geometry-runtime pass.
 - [Inspect a closed station profile before interpreting the loft](closed-profile.md) — **FreeCAD**.
 - [Report closed hull topology and measured dimensions](loft-solid-report.md) — **FreeCAD**.
 - [Check guide visibility options against the construction inventory](display-option-counts.md) — **FreeCAD**.
+- [Compare the sample guide model with the closed hull model](guide-versus-solid.md) — **FreeCAD**.
