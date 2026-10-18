@@ -21,3 +21,4 @@ Successful syntax or analytical checks do not establish a geometry-runtime pass.
 - [Reconcile rack members with the 94-object baseline](rack-parts-inventory.md) — **Python**.
 - [Calculate deck elevations and nominal vertical gaps](rack-clearance-schedule.md) — **Python**.
 - [Separate rack-center dimensions from component envelopes](rack-footprint.md) — **Python**.
+- [Verify the direction and volume of a synthetic brace](brace-vector.md) — **FreeCAD**.
