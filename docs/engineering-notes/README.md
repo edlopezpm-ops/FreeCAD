@@ -30,3 +30,4 @@ Successful syntax or analytical checks do not establish a geometry-runtime pass.
 - [Check guide visibility options against the construction inventory](display-option-counts.md) — **FreeCAD**.
 - [Compare the sample guide model with the closed hull model](guide-versus-solid.md) — **FreeCAD**.
 - [Open committed reference models without overwriting them](committed-model-readback.md) — **FreeCAD**.
+- [Export only the two hull solids to temporary BREP custody](hull-brep-roundtrip.md) — **FreeCAD**.
