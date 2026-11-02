@@ -1,4 +1,4 @@
-﻿# FreeCAD Hobby Projects
+# FreeCAD Hobby Projects
 
 Python scripts for generating simple FreeCAD models as hobby/learning projects.
 
@@ -29,7 +29,7 @@ The validator executes all three generators headlessly, checks the expected geom
 
 ## License
 
-No license file is present, so this repository grants no general permission to copy, modify, distribute, or reuse the work. Professionalization did not add or change licensing terms.
+No project license has been selected. GitHub’s platform terms permit viewing and forking; broader project reuse requires appropriate permission. The separate AEKR provenance notice does not license the project material.
 
 ## Governance
 
@@ -39,6 +39,19 @@ Changes follow the AEKR engineering workflow: bounded scope, deterministic geome
 ## Engineering recipes
 
 See the [engineering notes](docs/engineering-notes/README.md) for reproducible examples, source references and validation limits.
+
+<!-- (kommiBo) Project-specific behavior, privacy and permission boundaries. -->
+## Privacy, use and permissions
+
+The generators run inside a FreeCAD installation, not a normal standalone Python
+interpreter. Valid geometry is not evidence of rack load capacity or vessel safety.
+Reference CAD files and new exports need a metadata and provenance review before sharing.
+
+- [Privacy notice](PRIVACY.md): project processing, hosting and requests.
+- [Use and service boundaries](TERMS.md): intended use and license precedence.
+- [Licensing inventory](docs/licensing.md): project, dependency and AEKR provenance scopes.
+- [Data handling](docs/data-handling.md): local artifacts and publication checks.
+- [Security reporting](SECURITY.md): private reports and support limits.
 
 ---
 
