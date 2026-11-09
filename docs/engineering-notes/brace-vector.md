@@ -2,7 +2,7 @@
 # Verify the direction and volume of a synthetic brace
 
 The brace helper starts with a cylinder along local +Z, computes `end - start`,
-and rotates that Z axis onto the direction vector. A radius is supplied explicitly;
+and rotates that Z axis onto the direction vector. A radius is provided explicitly;
 the rack calls it with `SIDE_BRACE_SIZE / 2`, so the current 45 mm parameter acts
 as a cylinder diameter rather than a square brace section.
 
@@ -15,7 +15,7 @@ as a cylinder diameter rather than a square brace section.
 | Center of mass | (0, 550, 1150) mm |
 
 The example first loads the source, then creates one helper-generated brace in a
-separate example document. It checks center of mass, cylinder volume, and that
+separate example document. It verifies center of mass, cylinder volume, and that
 coincident endpoints raise the helper's explicit `RuntimeError` before an object
 is added. Expected output ends with `brace_geometry True` and
 `zero_length_rejected True`.

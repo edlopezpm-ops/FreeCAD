@@ -3,7 +3,7 @@
 
 The full generator calls `Part.makeLoft(station_wires, True, False, False, 5)`
 and stores each result in a `Part::Feature`. The solid request is an input to the
-kernel, so inspect the result instead of assuming the flag guarantees success.
+kernel, so examine the result instead of assuming the flag guarantees success.
 
 | Object | Baseline expectation |
 | --- | --- |
@@ -16,7 +16,7 @@ The example reports solids, shells, faces, edges, volume in mm^3, and measured
 bounds for both hulls. Expected output includes two valid single-solid rows; face
 and edge counts are reported rather than frozen because they are diagnostic
 topology details, not the existing validator's compatibility contract. It prints
-the relative port/starboard volume difference without imposing a new tolerance.
+the relative port/starboard volume difference without introducing a new tolerance.
 
 Volume is enclosed by the generated solid and is not automatically displaced
 water volume: no waterline is intersected, and no flotation condition is solved.

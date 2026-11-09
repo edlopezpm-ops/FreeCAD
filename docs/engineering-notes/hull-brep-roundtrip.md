@@ -1,7 +1,7 @@
 <!-- (kommiBo) Source-reviewed engineering note; optional diagnostic. -->
 # Export only the two hull solids to temporary BREP custody
 
-An interchange example should state exactly what it exports. This recipe selects
+An interchange example should specify precisely what it exports. This recipe selects
 `Port_Hull` and `Starboard_Hull` from a newly generated full model, compounds their
 shapes, writes one temporary BREP, reads it back, and verifies two valid solids
 with a matching combined volume.
@@ -24,7 +24,7 @@ The exported compound is a container for two separated solids, not a fused vesse
 an assembly with semantic links, or a structural manufacturing model. Successful
 BREP readback does not establish STEP compatibility or preserve Draft parameters,
 object names, view styles, or documentation. Retaining an export for review requires
-an intentional destination and recorded source revision/runtime.
+a deliberate destination and recorded source revision/runtime.
 
 ## Run the complete example
 
