@@ -1,7 +1,7 @@
 <!-- (kommiBo) Source-reviewed engineering note; optional diagnostic. -->
 # Translate a copied hull without editing the source object
 
-Shape geometry and document placement are separate pieces of a FreeCAD model.
+Shape geometry and document placement are separate aspects of a FreeCAD model.
 This recipe creates a copy of the port hull's shape in a separate example
 document, translates the copy by +15000 mm in X and +2500 mm in Z, then compares
 bounds and volume with the original object.
@@ -20,7 +20,7 @@ assembly instance. Later rebuilding the source will not automatically update the
 copy. The example adds only an in-memory document and does not save either model.
 
 Bounding boxes report global axis-aligned extents after placement. A translation
-test is deliberately simpler than a rotation, where X/Y/Z extents can change
+test is intentionally simpler than a rotation, where X/Y/Z extents can change
 even when volume stays constant. These checks explain coordinate handling and
 cannot establish collision clearance, flotation, structural connections, or the
 correctness of an external assembly coordinate system.
