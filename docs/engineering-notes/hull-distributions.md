@@ -2,7 +2,7 @@
 # Execute the closed-hull distribution functions without a CAD kernel
 
 The full hull uses sine-based fullness functions, unlike the sample's parabolic
-guide model. This example extracts the actual numeric distribution functions from
+guide model. This example extracts the implemented numeric distribution functions from
 the local AST and executes only those functions with their literal constants and
 Python's `math` module. It never runs the module's top-level rebuild.
 
@@ -18,7 +18,7 @@ exact midpoint. `beam_at`, `draft_at`, and `keel_z_at` consume normalized t, not
 in millimeters; passing X=6000 is a coordinate-domain error.
 
 The sine input is clamped to [0,1] for fullness and draft, but `x_at` and
-`sheer_z_at` are not clamped. Stay within the intended domain instead of assuming
+`sheer_z_at` are not clamped. Remain within the intended domain instead of assuming
 all functions enforce it. The extracted functions establish scalar calculations,
 not profile validity, loft continuity, solid volume, buoyancy, or measured bounds.
 
