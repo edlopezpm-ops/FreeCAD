@@ -1,7 +1,7 @@
 <!-- (kommiBo) Source-reviewed engineering note; optional diagnostic. -->
 # Calculate deck elevations and nominal vertical gaps
 
-`LEVEL_ELEVATIONS` locates the bottom of each horizontal beam. The deck starts at
+`LEVEL_ELEVATIONS` locates the bottom of each horizontal beam. The deck begins at
 the beam's top, so the top-of-deck elevation includes both beam height and deck
 thickness. This distinction matters when reading a front elevation.
 
@@ -14,7 +14,7 @@ thickness. This distinction matters when reading a front elevation.
 All values are millimeters. The example derives these values from the literal
 parameters, prints a row per level, and asserts positive gaps. The top-level
 comparison is to `RACK_HEIGHT`, which is an upright extent rather than a modeled
-roof or overhead obstruction. Floor-to-first-beam space is a different measurement.
+roof or overhead obstruction. Floor-to-first-beam space is a separate measurement.
 
 Expected output is the table's numerical schedule. It is an analytical reading of
 the current rectangular geometry; it does not account for pallet height, load

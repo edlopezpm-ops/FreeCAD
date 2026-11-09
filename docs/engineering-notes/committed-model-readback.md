@@ -2,7 +2,7 @@
 # Open committed reference models without overwriting them
 
 The baseline validator checks source-generated geometry and independently opens
-the two committed `.FCStd` references. Those are distinct evidence paths: a source
+the two committed `.FCStd` references. Those are separate evidence paths: a source
 change can succeed while a stored reference fails to load, and a reference can
 open even if the current generator has changed.
 
@@ -19,7 +19,7 @@ two `reference_valid True` rows and positive shaped-object counts. It never call
 Do not assume the reference's internal document name from its filename; report
 `document.Name` after opening. A recompute can modify the in-memory document even
 when no bytes are saved. The current checks establish neither byte-for-byte nor
-geometric equality with generated models. Such a comparison would need a separate
+geometric equality with generated models. Such a comparison would require a separate
 explicit tolerance and topology/placement comparison; this recipe does not invent
 one. Reference readback is also not an approval of loads, flotation, or fabrication.
 
