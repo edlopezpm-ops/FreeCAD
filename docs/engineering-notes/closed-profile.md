@@ -3,7 +3,7 @@
 
 The full-hull generator interpolates twelve profile points into one closed
 B-spline edge, wraps that edge in a `Part.Wire`, and rejects a wire that is not
-closed. The profile includes a raised top return; it is not simply the sample
+closed. The profile includes a raised top return; it is not merely the sample
 guide's open seven-point section with its endpoints joined.
 
 | Midship port-profile input | Value |
@@ -21,7 +21,7 @@ It also prints the kernel bound, which need not equal the defining-point extents
 
 Closure describes topology, while validity describes the kernel's acceptance of
 the current wire. Neither proves a fair surface, a successful solid loft, a physical
-deck, or manufacturable shell thickness. When troubleshooting a loft, inspect
+deck, or manufacturable shell thickness. When troubleshooting a loft, examine
 individual wires and their ordering before changing the loft's solid flag or
 weakening the full model's solid assertions.
 
