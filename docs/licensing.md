@@ -4,11 +4,12 @@
 
 Reviewed 2026-11-12.
 
-No root project license has been selected. The scripts and committed CAD reference files have no general reuse grant from this maintenance change.
+The root [license scope](../LICENSE) now grants standard [MIT permissions](../LICENSES/MIT.txt) for its exact list of educational source and associated documentation. It is the sole authoritative path list. Unlisted material receives no new license; existing permissions remain intact.
 
 | Component | Evidence and licensing boundary |
 |---|---|
-| Hull/rack scripts and committed `.FCStd` files | No root project license; review ownership and permission before reuse. |
+| Listed hull/rack source, examples, validator and paired documentation | Standard MIT for the exact paths in the root [scope notice](../LICENSE); preserve the copyright and permission notice in copies or substantial portions. |
+| Committed `.FCStd` reference files | Excluded from the new grant; their existing permissions are unchanged. |
 | `FreeCAD`, `Part`, `Draft`, optional `FreeCADGui` | External runtime modules with their own distribution and dependency notices. |
 | Exported BREP or other geometry | Export does not itself grant rights or demonstrate engineering certification. |
 
@@ -32,14 +33,16 @@ The linked commits identify the material being described; this inventory is not 
 | Date | Source change | Effect on permissions |
 |---|---|---|
 | 2026-11-01 | [Licensing inventory added](https://github.com/edlopezpm-ops/FreeCAD/commit/2566cdb8e307f44b1865e95b937b7e99330d795d) | Documented the absent root license and the distinction between project models and the FreeCAD runtime; no general license was added. |
-| 2026-11-12 | This inventory update | Adds reuse guidance and traceable history; preserves the existing permissions. |
+| 2026-11-12 | Earlier inventory update | Added reuse guidance and traceable history without a new grant. |
+| 2026-11-12 | Owner-authorized [scoped MIT grant](../LICENSE) | Makes the exact listed source and documentation available under MIT; preserves previous permissions and third-party notices. |
 
 ## Which permission applies to a proposed reuse?
 
 | Proposed action | Applicable boundary |
 |---|---|
-| View or fork this public repository on GitHub | GitHub's platform terms permit these platform actions; this is not a general project license. |
-| Redistribute or adapt scripts, committed CAD files or exported project geometry beyond applicable rights | Request the missing permission and identify the source files and revision, including the generator behind an export. |
+| View or fork this public repository on GitHub | GitHub's platform terms permit these platform actions; the root MIT grant separately covers its listed material. |
+| Use, modify or redistribute material covered by the root scope notice | Follow the standard MIT notice condition; commercial use needs no separate approval under this grant. |
+| Reuse committed CAD reference files or other unlisted material beyond existing permissions | Request the missing permission and identify the relevant files and revision. |
 | Package FreeCAD or an add-on alongside these models | Review that distribution's own notices and requirements separately; the runtime license does not license these models. |
 | Publish a screenshot or export | Review project permissions, third-party material and embedded metadata; a successful geometry test supplies none of those permissions. |
 

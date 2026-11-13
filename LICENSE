@@ -1,0 +1,73 @@
+# License scope — FreeCAD
+
+<!-- (kommiBo) Owner-authorized scoped MIT grant, 2026-11-12. -->
+
+Copyright (c) 2026 Ed Lopez
+
+Ed Lopez licenses the project files listed below under the standard MIT License in
+[LICENSES/MIT.txt](LICENSES/MIT.txt). For this grant, the "Software" consists of the
+code and associated documentation at these exact, repository-relative paths. This
+file is the authoritative scope list; summaries elsewhere do not expand it.
+
+MIT permits use, copying, modification and redistribution, including commercial use,
+subject to its notice condition. Repository use notes and AEKR website terms do not
+add approval, noncommercial-use or other conditions to that MIT grant.
+
+## Covered paths
+
+- `FreeCAD Hull/FullCatamaranHull.py`
+- `FreeCAD Hull/README.md`
+- `FreeCAD Hull/SampleCatHull.py`
+- `FreeCAD_WHRackDesign/README.md`
+- `FreeCAD_WHRackDesign/WarehouseRack3x3.py`
+- `docs/engineering-notes/README.md`
+- `docs/engineering-notes/brace-vector.md`
+- `docs/engineering-notes/closed-profile.md`
+- `docs/engineering-notes/committed-model-readback.md`
+- `docs/engineering-notes/display-option-counts.md`
+- `docs/engineering-notes/guide-versus-solid.md`
+- `docs/engineering-notes/hull-brep-roundtrip.md`
+- `docs/engineering-notes/hull-distributions.md`
+- `docs/engineering-notes/hull-placement-copy.md`
+- `docs/engineering-notes/loft-solid-report.md`
+- `docs/engineering-notes/rack-clearance-schedule.md`
+- `docs/engineering-notes/rack-footprint.md`
+- `docs/engineering-notes/rack-input-contract.md`
+- `docs/engineering-notes/rack-object-identities.md`
+- `docs/engineering-notes/rack-parts-inventory.md`
+- `docs/engineering-notes/rack-property-recompute.md`
+- `docs/engineering-notes/rack-volume-report.md`
+- `docs/engineering-notes/reference-archive-manifest.md`
+- `docs/examples/brace-vector.py`
+- `docs/examples/closed-profile.py`
+- `docs/examples/committed-model-readback.py`
+- `docs/examples/display-option-counts.py`
+- `docs/examples/guide-versus-solid.py`
+- `docs/examples/hull-brep-roundtrip.py`
+- `docs/examples/hull-distributions.py`
+- `docs/examples/hull-placement-copy.py`
+- `docs/examples/loft-solid-report.py`
+- `docs/examples/rack-clearance-schedule.py`
+- `docs/examples/rack-footprint.py`
+- `docs/examples/rack-input-contract.py`
+- `docs/examples/rack-object-identities.py`
+- `docs/examples/rack-parts-inventory.py`
+- `docs/examples/rack-property-recompute.py`
+- `docs/examples/rack-volume-report.py`
+- `docs/examples/reference-archive-manifest.py`
+- `tests/validate_models.py`
+
+## Material outside this grant
+
+Files not listed above receive no new license from this notice. Existing permissions
+remain intact, including separately licensed AEKR provenance material. Third-party
+software retains its own applicable licenses; this grant does not relicense the
+FreeCAD runtime, its dependencies or third-party material.
+
+The committed `.FCStd` reference models are not included in this grant. This notice
+does not change their existing permissions or establish rights over material supplied
+by other parties. Licensing a generator does not certify the safety of its output.
+
+No trademark or endorsement permission is granted. AEKR brand assets, private agent
+instructions and other unlisted material retain their existing status. Applicable
+rights and permissions granted previously are not withdrawn by this scope notice.

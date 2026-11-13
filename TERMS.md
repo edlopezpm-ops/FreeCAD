@@ -73,7 +73,7 @@ do not change the existing project's permissions or copyright ownership.
 
 ## License and ownership take precedence
 
-No root project license has been selected. The scripts and committed CAD reference files have no general reuse grant from this maintenance change.
+The exact source and associated documentation paths listed in the root [license scope](LICENSE) are available under the standard [MIT License](LICENSES/MIT.txt). Unlisted material receives no new grant. These use notes and the AEKR website terms do not narrow the MIT permissions, add a noncommercial restriction or change the copyright holder.
 
 These notes describe operating boundaries, not a click-through agreement or a new
 software license. Existing license grants and applicable rights take precedence over
